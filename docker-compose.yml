@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  nginx_ssl:
+    image: pablozaiden/docker-nginx-auto-ssl
+    restart: always
+    ports:
+      - 443:443
+      - 80:80
+    environment:
+      - ALLOWED_DOMAINS=your-website.example.org
+      - SITES=your-website.example.org=webapp:80
+  webapp:
+    image: nginx:alpine
+    restart: always

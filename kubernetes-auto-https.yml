@@ -34,7 +34,7 @@ metadata:
 spec:
   acme:
     server: https://acme-staging-v02.api.letsencrypt.org/directory
-    email: your_email@example.org
+    email: your-email@example.org
     privateKeySecretRef:
       name: letsencrypt-staging
     http01: {}
@@ -48,7 +48,7 @@ metadata:
 spec:
   acme:
     server: https://acme-v02.api.letsencrypt.org/directory
-    email: your_email@example.org
+    email: your-email@example.org
     privateKeySecretRef:
       name: letsencrypt-prod
     http01: {}

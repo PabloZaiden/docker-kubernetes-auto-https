@@ -24,7 +24,7 @@ Have automatic HTTPS certificates using docker-compose or (ideally) kubernetes!
 - [Install Helm in the client computer](https://docs.helm.sh/using_helm/#installing-helm)
 - [Install Tiller in the cluster](https://docs.helm.sh/using_helm/#installing-tiller)
 - Set the ingress name
-    `export INGRESS_NAME=interview`
+    `export INGRESS_NAME=webapp`
 - Install nginx-ingress in the cluster (if you're using AKS with RBAC support, remove the `--set rbac.create=false`):
     - `helm install --name $INGRESS_NAME stable/nginx-ingress --namespace kube-system --set rbac.create=false`
 - Get the IP for the newly-created service and point your DNS record to it.

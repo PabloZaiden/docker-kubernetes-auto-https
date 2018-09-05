@@ -93,10 +93,10 @@ spec:
 apiVersion: certmanager.k8s.io/v1alpha1
 kind: Certificate
 metadata:
-  name: tls-secret
+  name: tls-secret-staging
   #name: tls-secret-prod
 spec:
-  secretName: tls-secret
+  secretName: tls-secret-staging
   #secretName: tls-secret-prod
   dnsNames:
   - your-website.example.org
@@ -124,8 +124,8 @@ spec:
   tls:
   - hosts:
     -  your-website.example.org
-    #secretName: tls-secret
-    secretName: tls-secret-prod
+    secretName: tls-secret-staging
+    #secretName: tls-secret-prod
   rules:
   - host: your-website.example.org
     http:

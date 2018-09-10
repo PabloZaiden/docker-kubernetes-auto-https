@@ -46,7 +46,8 @@ spec:
         app: webapp
     spec:
       containers:
-      - image: nginx:alpine
+      - name: webapp
+        image: nginx:alpine
       restartPolicy: Always
 ---
 

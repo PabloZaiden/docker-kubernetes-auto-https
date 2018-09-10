@@ -10,7 +10,8 @@ spec:
         app: webapp
     spec:
       containers:
-      - image: nginx:alpine
+      - name: webapp
+        image: nginx
       restartPolicy: Always
 
 ---
@@ -58,7 +59,7 @@ spec:
 apiVersion: certmanager.k8s.io/v1alpha1
 kind: Certificate
 metadata:
-  name: tls-secret
+  name: tls-secret-staging
   #name: tls-secret-prod
 spec:
   secretName: tls-secret-staging
